@@ -82,10 +82,12 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue-darken-1" variant="text" outlined @click="dialog = false">
-            Close
+              <i class="fa fa-remove"></i> &nbsp
+              Cancel
             </v-btn>
             <v-btn color="blue-darken-1" variant="text" @click="submitTask(), dialog = false">
-                Save
+              <i class="fa-solid fa-plus"></i> &nbsp
+               Add
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -177,6 +179,7 @@
                             </template>
                             <v-date-picker v-model="date" no-title scrollable>
                               <v-btn text color="primary" @click="menu = false">
+                                <i class="icon-remove"></i>
                                 Cancel
                               </v-btn>
                               <v-btn text color="primary" @click="$refs.menu.save(date)">
@@ -200,10 +203,12 @@
                   <v-card-actions>
                     <v-spacer></v-spacer>
                     <v-btn color="blue-darken-1" variant="text" @click="tasks[index].isUpdate = false">
-                    Close
+                      <i class="fa fa-remove"></i> &nbsp
+                      Close
                     </v-btn>
                     <v-btn color="blue-darken-1" variant="outlined" @click="updateTask(index), tasks[index].isUpdate = false">
-                        Save
+                      <i class="fa-solid fa-plus"></i> &nbsp
+                      Save
                     </v-btn>
                   </v-card-actions>
                 </v-card>

@@ -129,7 +129,7 @@
           <td>{{task.description}}</td>
           <td>{{task.deadline}}</td>
           <td>{{task.priority}}</td>
-          <td><v-checkbox v-model="tasks[index].isComplete"/></td>
+          <td><v-row><v-col></v-col><v-col><v-checkbox class="mx-auto" v-model="tasks[index].isComplete"/></v-col><v-col></v-col></v-row></td>
           <td>
             <v-container v-if="!tasks[index].isComplete">
               <v-dialog v-model=tasks[index].isUpdate class="w-50">
